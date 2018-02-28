@@ -1,9 +1,9 @@
 # CAT-DOG
 App by android using tensorflow cats or dogs.
 
-<b>dog:</b>
+<b>Dog:</b>
 
 <img src="dog.png" />
 
-
+<b>Cat:</b>
 <img src="cat.png" />
