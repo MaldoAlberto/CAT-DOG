@@ -9,6 +9,5 @@ App by android using tensorflow cats or dogs.
 <img src="cat.png" />
 
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=aY8EuuYvOcY">
-</iframe>
+"https://www.youtube.com/watch?v=aY8EuuYvOcY">
+
