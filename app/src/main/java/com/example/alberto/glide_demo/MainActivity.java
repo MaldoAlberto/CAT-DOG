@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
     private static final int FILTER_STAGES = 2;
     private static final float FILTER_FACTOR = 0.4f;
 
-    private String[] labelList  = new String[]{"caricatura", "documental"};//, "futbol", "guerra", "noticia", "novela"};
+    private String[] labelList  = new String[]{"dogs", "cats"};
 
     private TensorFlowInferenceInterface inferenceInterface;
 
