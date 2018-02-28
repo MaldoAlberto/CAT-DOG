@@ -54,9 +54,9 @@ public class MainActivity extends Activity {
     private ByteBuffer imgData = null;
 
     /** An array to hold inference results, to be feed into Tensorflow Lite as outputs. */
-    private float[][] labelProbArray = null;
+    private float[] labelProbArray = null;
     /** multi-stage low pass filter * */
-    private float[][] filterLabelProbArray = null;
+    private float[] filterLabelProbArray = null;
 
     private static final int FILTER_STAGES = 2;
     private static final float FILTER_FACTOR = 0.4f;
@@ -114,14 +114,6 @@ public class MainActivity extends Activity {
                 finalBitmap.getPixels(intValues, 0, finalBitmap.getWidth(), 0, 0, finalBitmap.getWidth(), finalBitmap.getHeight());
                 // Convert the image to floating point.
                 int pixel = 0;
-                for (int i = 0; i < DIM_IMG_SIZE_X; ++i) {
-                    for (int j = 0; j < DIM_IMG_SIZE_Y; ++j) {
-                        final int val = intValues[pixel++];
-                        floatValues[i * 3 + 0] = (((val >> 16) & 0xFF) - imageMean) / imageStd;
-                        floatValues[i * 3 + 1] = (((val >> 8) & 0xFF) - imageMean) / imageStd;
-                        floatValues[i * 3 + 2] = ((val & 0xFF) - imageMean) / imageStd;
-                    }
-                }
 
                 inferenceInterface.fillNodeFloat(INPUT_NODE,INPUT_SIZE,floatValues);
 
